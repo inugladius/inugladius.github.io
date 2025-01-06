@@ -152,6 +152,75 @@
 
 }
 
+
+        .hidden {
+            display: none;
+        }
+        .content {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+
+
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2, h3 {
+            color: #222;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 5px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0 10px 20px;
+        }
+
+    
+
+
+
+        
+        
+
     </style>
 </head>
 
@@ -202,6 +271,94 @@
         </div>
     </div>
 <br><br><br>
+
+    
+    <button id="toggleButton">view whitepaper</button>
+
+    <div id="content" class="content hidden">
+        
+        <h1>InuGladius: Legends Unite Whitepaper</h1>
+    
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#lore">Game World and Lore</a>
+        <a href="#gameplay">Gameplay Mechanics</a>
+        <a href="#economy">Play-to-Earn Economy</a>
+        <a href="#quests">Quests and Events</a>
+        <a href="#art">Art and Sound Design</a>
+        <a href="#community">Community Engagement</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#future">Future Developments</a>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p><strong>InuGladius: Legends Unite</strong> is an innovative Play-to-Earn multiplayer online game that combines the excitement of action-packed combat with deep lore, cooperative gameplay, and a player-driven economy. Set in a vibrant, fantastical world, players take on the roles of Inu Warriors from different clans, each with unique abilities and characteristics. Together, they must unite to face an encroaching darkness that threatens to engulf their realm.</p>
+        </section>
+        <section id="lore">
+            <h2>2. Game World and Lore</h2>
+            <p>The game is set in the mystical land of InuGladius, home to various clans of Inu Warriors, each representing different breeds such as Shiba Inu, Akita, and Husky. Each clan possesses unique cultural attributes, abilities, and aesthetics.</p>
+            <h3>Lore Overview</h3>
+            <p>InuGladius was once a harmonious land where clans coexisted peacefully. However, a malevolent force, known as the Shadow Legion, has begun to spread chaos and darkness throughout the land. As Inu Warriors, players are tasked with rallying their clans, embarking on epic quests, and defeating the forces of evil to restore peace.</p>
+            <h3>Storytelling Through Gameplay</h3>
+            <p>The narrative is woven into the gameplay, with players experiencing the story through quests, character interactions, and dynamic events. Each player's choices can impact the storyline, creating a unique experience for everyone involved.</p>
+        </section>
+        <section id="gameplay">
+            <h2>3. Gameplay Mechanics</h2>
+            <h3>3.1 Character Creation and Development</h3>
+            <ul>
+                <li><strong>Race:</strong> Choose from various Inu breeds, each offering distinct bonuses and aesthetic features.</li>
+                <li><strong>Class:</strong> Select from different classes such as Warrior, Mage, or Healer, each with unique skill sets and abilities.</li>
+                <li><strong>Skill Tree:</strong> A comprehensive skill tree allows players to specialize their characters by unlocking abilities and passive skills that complement their playstyle.</li>
+            </ul>
+            <h3>3.2 Combat System</h3>
+            <ul>
+                <li><strong>Dynamic Combat:</strong> Players engage in fast-paced battles where timing and tactics are crucial. Players can dodge, block, and execute powerful attacks.</li>
+                <li><strong>Skill Combinations:</strong> Players can chain abilities together for devastating combo attacks, encouraging experimentation and strategy.</li>
+                <li><strong>Boss Fights:</strong> Challenging boss encounters require teamwork and coordination, with each player’s role being critical to success.</li>
+            </ul>
+            <h3>3.3 Cooperative Gameplay</h3>
+            <p>The game emphasizes cooperation among players:</p>
+            <ul>
+                <li><strong>Clan System:</strong> Players can form or join clans, gaining access to unique clan skills, bonuses, and collaborative quests.</li>
+                <li><strong>Cooperative Missions:</strong> Some quests can only be completed with a team, promoting social interaction and teamwork.</li>
+            </ul>
+        </section>
+        <!-- Repeat structure for other sections -->
+        <section id="future">
+            <h2>9. Future Developments</h2>
+            <ul>
+                <li><strong>Cross-Platform Play:</strong> Enabling players on different devices to join forces and explore InuGladius together.</li>
+                <li><strong>Expanded Lore:</strong> Introducing new clans, characters, and storylines to enrich the world.</li>
+                <li><strong>Enhanced Customization:</strong> Offering more options for character customization, including cosmetic items and personal spaces.</li>
+            </ul>
+        </section>
+    </main>
+
+        <p>&copy; 2025 InuGladius Team. All rights reserved.</p>
+    
+
+
+
+
+
+
+
+        
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const content = document.getElementById('content');
+
+        toggleButton.addEventListener('click', () => {
+            content.classList.toggle('hidden');
+            toggleButton.textContent = content.classList.contains('hidden') ? 'Show Content' : 'Hide Content';
+        });
+    </script>
+
+<br><br><br>
+    
     <footer>
         <p>Join the InuGladius army on <a href="https://pump.fun">Pump.Fun</a> and become a part of the Solana revolution!</p>
     </footer>
