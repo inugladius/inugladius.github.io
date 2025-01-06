@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InuGladius (INU) - Presale</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f9f3d7;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            padding: 20px;
+            text-align: center;
+            animation: slideIn 2s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px #333;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .progress-section {
+            margin: 30px 0;
+        }
+
+        .progress-bar {
+            background: #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            height: 30px;
+            width: 100%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #00cc99, #009966);
+            width: 60%; /* Adjust this value to reflect the progress */
+            animation: grow 2s ease-out forwards;
+        }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 60%;
+            }
+        }
+
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #00cc99;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to InuGladius (INU)</h1>
+        <p>The powerful warrior coin on Solana, born on Pump.Fun!</p>
+    </header>
+
+    <div class="container">
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <h2>Presale Progress</h2>
+            <div class="progress-bar">
+                <span></span>
+            </div>
+            <p>60% of the presale target achieved! Join the revolution now!</p>
+        </section>
+
+        <!-- Information Section -->
+        <section class="info-section">
+            <div class="card">
+                <img src="your-image1.png" alt="Cartoon Sword">
+                <h3>What is InuGladius?</h3>
+                <p>InuGladius (INU) is the ultimate Solana-powered coin, designed for warriors and champions of crypto.</p>
+            </div>
+
+            <div class="card">
+                <img src="your-image2.png" alt="Coin Icon">
+                <h3>Why InuGladius?</h3>
+                <p>With lightning-fast transactions and low fees, InuGladius is a symbol of strength, speed, and community.</p>
+            </div>
+
+            <div class="card">
+                <img src="your-image3.png" alt="Shield">
+                <h3>Contract Details</h3>
+                <p>Official Contract Address:</p>
+                <p style="font-weight: bold;">2Mjji3qRraoDGzM13YzK2fGTw7gbPJaRmnZeeBYspump</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Join the InuGladius army on <a href="https://pump.fun">Pump.Fun</a> and become a part of the Solana revolution!</p>
+    </footer>
+</body>
+
+</html>
