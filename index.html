@@ -158,6 +158,22 @@
 
 }
 
+.background-image2 {
+    background-image: url('img/bg2.jpg'); /* Ersetze dies durch den Pfad zu deinem Bild */
+    background-size: cover; /* Das Bild wird auf die Größe des Containers angepasst */
+    background-attachment: fixed; /* Das Bild bleibt fixiert, wenn gescrollt wird */
+    background-position: center; /* Zentriert das Bild */
+    height: 120vh; /* Vollständige Höhe des Sichtfensters */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+
+}
+
+
 
         .hidden {
             display: none;
@@ -175,6 +191,7 @@
             color: white;
             border: none;
             border-radius: 14px;
+            font-size:2em;
             cursor: pointer;
             background: linear-gradient(90deg, #ffcc00, #ff9900);
             text-shadow: 2px 2px #333;
@@ -281,7 +298,7 @@
     </div>
 
     <div id="content" class="content hidden">
-        
+     <div class="background-image2">
         <h1>InuGladius: Legends Unite Whitepaper</h1>
     
     <nav>
@@ -408,7 +425,7 @@
 
 
 
-        
+     </div>
     </div>
 
     <script>
