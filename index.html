@@ -74,6 +74,38 @@
             }
         }
 
+
+        .progress-section2 {
+            margin: 30px 12px;
+        }
+
+        .progress-bar2 {
+            background: #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            height: 30px;
+            width: 100%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar2 span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            width: 9%; /* Adjust this value to reflect the progress */
+            animation: grow2 2s ease-out forwards;
+        }
+
+        @keyframes grow2 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 9%;
+            }
+        }
+
         .info-section {
             display: flex;
             flex-wrap: wrap;
@@ -261,10 +293,22 @@
                 <span></span>
             </div>
             <p>9% of the presale target achieved! Join the revolution now!</p>
+        </section>
+
+       <!-- Progress Section -->
+        <section class="progress-section2">
+            <h2>King of the hill progress</h2>
+            <div class="progress-bar2">
+                <span></span>
+            </div>
+            <p>9% of the presale target achieved! Join the revolution now!</p>
             <br><div align="center">
             <button onclick="window.location.href='https://pump.fun/coin/2Mjji3qRraoDGzM13YzK2fGTw7gbPJaRmnZeeBYspump';" class="button">buy $INU</button>
             </div><br>
         </section>
+
+
+    
 
     <div class="container">
 
