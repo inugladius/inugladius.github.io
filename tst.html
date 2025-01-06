@@ -17,6 +17,7 @@
 
         header {
             background: linear-gradient(90deg, #ffcc00, #ff9900);
+            
             padding: 20px;
             text-align: center;
             animation: slideIn 2s ease-in-out;
@@ -95,6 +96,7 @@
             max-width: 100px;
             margin-bottom: 20px;
             animation: bounce 2s infinite;
+            border-radius: 14px;
         }
 
         @keyframes bounce {
@@ -134,6 +136,20 @@
                 opacity: 1;
             }
         }
+
+        .background-image {
+    background-image: url('img/bg1.jpg'); /* Ersetze dies durch den Pfad zu deinem Bild */
+    background-size: cover; /* Das Bild wird auf die Größe des Containers angepasst */
+    background-attachment: fixed; /* Das Bild bleibt fixiert, wenn gescrollt wird */
+    background-position: center; /* Zentriert das Bild */
+    height: 100vh; /* Vollständige Höhe des Sichtfensters */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
     </style>
 </head>
 
@@ -142,6 +158,11 @@
         <h1>Welcome to InuGladius (INU)</h1>
         <p>The powerful warrior coin on Solana, born on Pump.Fun!</p>
     </header>
+
+    <div class="background-image">
+        <h1>Willkommen auf meiner Seite!</h1>
+        <p>Scrollen Sie nach unten, um mehr zu sehen.</p>
+    </div>
 
     <div class="container">
         <!-- Progress Section -->
