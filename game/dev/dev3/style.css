@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffcc99, #ff9966);
+    color: #333;
+}
+
+/* Screens */
+.screen {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #ffe5b4, #ffa07a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Menu Styling */
+.menu-container {
+    text-align: center;
+}
+
+.menu-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background: #3498db;
+}
+
+/* Game Arena */
+.arena {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    position: relative;
+    background: #fff;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 15px;
+    border: 2px solid #333;
+}
+
+.gladiator {
+    position: relative;
+    text-align: center;
+}
+
+.gladiator img {
+    width: 100px;
+    height: 100px;
+    animation: idle 1.5s infinite;
+}
+
+.health-bar {
+    width: 100px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.health {
+    height: 100%;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
+
+/* Keyframes for animations */
+@keyframes idle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Weapons Menu */
+.weapons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.weapon-option {
+    text-align: center;
+    cursor: pointer;
+}
+
+.weapon-option img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
