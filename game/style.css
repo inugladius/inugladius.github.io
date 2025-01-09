@@ -6,80 +6,78 @@ body {
     padding: 0;
 }
 
-.game-container {
-    max-width: 800px;
-    margin: 0 auto;
+.hidden {
+    display: none;
+}
+
+.screen {
+    text-align: center;
     padding: 20px;
 }
 
-header h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #e74c3c;
-    text-shadow: 2px 2px #ecf0f1;
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3498db;
 }
 
 .arena {
     display: flex;
     justify-content: space-between;
-    background: #fff;
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
+    align-items: center;
     height: 300px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid #333;
 }
 
 .gladiator {
+    position: relative;
     width: 100px;
     height: 100px;
-    background: #f1c40f;
     border-radius: 50%;
+    background-color: #f1c40f;
+    animation: idle 1.5s infinite;
+}
+
+@keyframes idle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.enemy {
+    background-color: #e74c3c;
+}
+
+.weapon {
     position: absolute;
-    bottom: 20px;
+    bottom: -10px;
+    left: 50%;
+    width: 40px;
+    height: 10px;
+    background: #333;
+    transform: translateX(-50%);
 }
 
-#player {
-    left: 20px;
-    background-image: url('../img/bg4.jpg'); /* Add your cartoon Shiba Inu Gladiator image */
-    background-size: cover;
-}
-
-#enemy {
-    right: 20px;
-    background-image: url('../img/bg1.jpg'); /* Add an enemy image here */
-    background-size: cover;
-}
-
-.controls {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.controls button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1em;
-    color: #fff;
-    background: #2980b9;
-    border: none;
+.weapon-option {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background: #e67e22;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.controls button:hover {
-    background: #3498db;
+.weapon-option:hover {
+    background: #d35400;
 }
-
-.stats {
-    text-align: center;
-}
-
-.stats p {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
