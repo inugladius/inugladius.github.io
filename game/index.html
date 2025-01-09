@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InuGladius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>InuGladius: The Arena</h1>
+        </header>
+        <main>
+            <div class="arena">
+                <div id="player" class="gladiator"></div>
+                <div id="enemy" class="gladiator enemy"></div>
+            </div>
+            <div class="controls">
+                <button id="attack">Attack</button>
+                <button id="upgrade">Upgrade Weapon</button>
+                <button id="next-level">Next Level</button>
+            </div>
+            <div class="stats">
+                <p>Level: <span id="level">1</span></p>
+                <p>Player Health: <span id="player-health">100</span></p>
+                <p>Enemy Health: <span id="enemy-health">100</span></p>
+                <p>Coins: <span id="coins">0</span></p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
