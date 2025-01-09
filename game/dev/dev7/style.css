@@ -1,0 +1,78 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: white;
+    overflow: hidden;
+}
+
+/* Game Title */
+.game-title {
+    font-size: 3em;
+    text-shadow: 2px 2px #e67e22;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Buttons */
+.menu-button {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 4px #922b21;
+    transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+    background: linear-gradient(to bottom, #c0392b, #e74c3c);
+    transform: translateY(-2px);
+}
+
+.menu-button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Arena Styling */
+.arena {
+    width: 100%;
+    height: 60%;
+    background: url('../img/arena-background.webp') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* Gladiator Health Bars */
+.health-bar {
+    width: 150px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.health {
+    height: 100%;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
