@@ -2,7 +2,7 @@
 let level = 1;
 let playerHealth = 100;
 let enemyHealth = 100;
-let coins = 50;
+let coins = 50000;
 let weapon = { blade: 0, hilt: 0, core: 0 };
 
 // Start Game
