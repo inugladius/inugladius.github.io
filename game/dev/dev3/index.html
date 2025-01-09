@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InuGladius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="menu" class="screen active">
+        <div class="menu-container">
+            <h1>🐾 InuGladius</h1>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="openSettings()">Settings</button>
+        </div>
+    </div>
+
+    <!-- Settings Menu -->
+    <div id="settings" class="screen">
+        <div class="menu-container">
+            <h1>⚙️ Settings</h1>
+            <label>
+                <span>Sound: </span>
+                <input type="checkbox" id="sound-toggle" checked>
+            </label>
+            <button onclick="backToMenu()">Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game" class="screen">
+        <header>
+            <h1>🐾 InuGladius: The Arena</h1>
+            <button onclick="openWeaponsMenu()">⚔️ Weapons</button>
+        </header>
+        <div class="arena">
+            <div id="player" class="gladiator">
+                <img src="player.png" alt="Player Gladiator">
+                <div class="health-bar">
+                    <div id="player-health-bar" class="health"></div>
+                </div>
+            </div>
+            <div id="enemy" class="gladiator">
+                <img src="enemy.png" alt="Enemy Gladiator">
+                <div class="health-bar">
+                    <div id="enemy-health-bar" class="health"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="attack">⚔️ Attack</button>
+            <button id="next-level">🏆 Next Level</button>
+        </div>
+        <div class="stats">
+            <p>Level: <span id="level">1</span></p>
+            <p>Coins: <span id="coins">0</span></p>
+        </div>
+    </div>
+
+    <!-- Weapons Menu -->
+    <div id="weapons-menu" class="screen">
+        <div class="menu-container">
+            <h1>Choose Your Weapon</h1>
+            <div class="weapons">
+                <div class="weapon-option" onclick="selectWeapon('sword')">
+                    <img src="sword.png" alt="Sword">
+                    <span>Sword</span>
+                </div>
+                <div class="weapon-option" onclick="selectWeapon('axe')">
+                    <img src="axe.png" alt="Axe">
+                    <span>Axe</span>
+                </div>
+                <div class="weapon-option" onclick="selectWeapon('spear')">
+                    <img src="spear.png" alt="Spear">
+                    <span>Spear</span>
+                </div>
+            </div>
+            <button onclick="closeWeaponsMenu()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
