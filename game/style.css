@@ -43,13 +43,13 @@ header h1 {
 
 #player {
     left: 20px;
-    background-image: url('player.png'); /* Add your cartoon Shiba Inu Gladiator image */
+    background-image: url('../img/bg4.jpg'); /* Add your cartoon Shiba Inu Gladiator image */
     background-size: cover;
 }
 
 #enemy {
     right: 20px;
-    background-image: url('enemy.png'); /* Add an enemy image here */
+    background-image: url('../img/bg1.jpg'); /* Add an enemy image here */
     background-size: cover;
 }
 
