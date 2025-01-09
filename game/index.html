@@ -7,18 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
+    <div id="menu" class="screen">
+        <h1>InuGladius</h1>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="openSettings()">Settings</button>
+    </div>
+
+    <div id="settings" class="screen hidden">
+        <h1>Settings</h1>
+        <button onclick="toggleSound()">Sound: <span id="sound-status">ON</span></button>
+        <button onclick="backToMenu()">Back to Menu</button>
+    </div>
+
+    <div id="game" class="screen hidden">
         <header>
             <h1>InuGladius: The Arena</h1>
         </header>
         <main>
             <div class="arena">
-                <div id="player" class="gladiator"></div>
-                <div id="enemy" class="gladiator enemy"></div>
+                <div id="player" class="gladiator">
+                    <div class="weapon"></div>
+                </div>
+                <div id="enemy" class="gladiator enemy">
+                    <div class="weapon"></div>
+                </div>
             </div>
             <div class="controls">
                 <button id="attack">Attack</button>
-                <button id="upgrade">Upgrade Weapon</button>
+                <button onclick="openWeaponsMenu()">Weapons</button>
                 <button id="next-level">Next Level</button>
             </div>
             <div class="stats">
@@ -29,6 +45,17 @@
             </div>
         </main>
     </div>
+
+    <div id="weapons-menu" class="screen hidden">
+        <h1>Choose Your Weapon</h1>
+        <div class="weapons">
+            <div class="weapon-option" onclick="selectWeapon('sword')">Sword</div>
+            <div class="weapon-option" onclick="selectWeapon('axe')">Axe</div>
+            <div class="weapon-option" onclick="selectWeapon('spear')">Spear</div>
+        </div>
+        <button onclick="closeWeaponsMenu()">Close</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
