@@ -9,7 +9,7 @@ let weaponStats = { attack: 10, speed: 5, durability: 10 };
 window.onload = () => {
     loadGame();
     updateStats();
-    switchScreen('menu-screen');
+    switchScreen('menu-screen'); // Start in the menu screen
 };
 
 // Save Game Data to Cookies
@@ -59,7 +59,7 @@ function startGame() {
 // Reset Game
 function resetGame() {
     playerHealth = 100;
-    enemyHealth = 100;
+    enemyHealth = 100 + level * 10; // Enemy gets tougher each level
     level = 1;
     coins = 50;
     weaponStats = { attack: 10, speed: 5, durability: 10 };
