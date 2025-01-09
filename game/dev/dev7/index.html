@@ -7,102 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Menu -->
+    <!-- Menu Screen -->
     <div id="menu-screen" class="screen active">
-        <div class="menu-container">
-            <h1 class="game-title">🐾 InuGladius 🐾</h1>
-            <div class="menu-buttons">
-                <button class="menu-button" onclick="startGame()">▶ Start Game</button>
-                <button class="menu-button" onclick="switchScreen('settings-screen')">⚙ Settings</button>
-                <button class="menu-button" onclick="viewInstructions()">📜 Instructions</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Settings Screen -->
-    <div id="settings-screen" class="screen">
-        <div class="menu-container">
-            <h1>⚙️ Settings</h1>
-            <label>
-                <span>Sound:</span>
-                <input type="checkbox" id="sound-toggle" checked>
-            </label>
-            <label>
-                <span>Difficulty:</span>
-                <select id="difficulty-select">
-                    <option value="easy">Easy</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-            </label>
-            <button class="menu-button" onclick="switchScreen('menu-screen')">⬅ Back</button>
-        </div>
+        <h1>Welcome to InuGladius</h1>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="switchScreen('instructions-screen')">Instructions</button>
+        <button onclick="switchScreen('settings-screen')">Settings</button>
     </div>
 
     <!-- Game Screen -->
     <div id="game-screen" class="screen">
-        <header class="game-header">
-            <div class="stats-bar">
-                <p>Level: <span id="level">1</span></p>
-                <p>Coins: <span id="coins">$INU</span></p>
-            </div>
-            <button class="menu-button small" onclick="switchScreen('weapons-screen')">⚔️ Upgrade Weapon</button>
-        </header>
         <div class="arena">
-            <div class="gladiator player" id="player">
-                <img src="../img/player.png" alt="Player Gladiator">
-                <div class="health-bar">
-                    <div id="player-health" class="health"></div>
-                </div>
-            </div>
-            <div class="gladiator enemy" id="enemy">
-                <img src="../img/enemy.png" alt="Enemy Gladiator">
-                <div class="health-bar">
-                    <div id="enemy-health" class="health"></div>
-                </div>
-            </div>
+            <div id="player" class="character">Player</div>
+            <div id="enemy" class="character">Enemy</div>
         </div>
-        <div class="controls">
-            <button id="attack-btn" class="menu-button">⚔️ Attack</button>
-            <button id="next-level-btn" class="menu-button">🏆 Next Level</button>
+        <div class="stats">
+            <div>Level: <span id="level">1</span></div>
+            <div>Coins: <span id="coins">50</span> $INU</div>
+            <div>Player Health: <div id="player-health" class="health-bar"></div></div>
+            <div>Enemy Health: <div id="enemy-health" class="health-bar"></div></div>
         </div>
-    </div>
-
-    <!-- Weapons Screen -->
-    <div id="weapons-screen" class="screen">
-        <div class="menu-container">
-            <h1>Upgrade Your Weapon</h1>
-            <p>Coins: <span id="upgrade-coins">$INU</span></p>
-            <div class="weapons-upgrade">
-                <div class="weapon-option" onclick="upgradeWeapon('blade')">
-                    <img src="../img/blade.png" alt="Blade">
-                    <span>Blade (+5 attack)</span>
-                </div>
-                <div class="weapon-option" onclick="upgradeWeapon('hilt')">
-                    <img src="../img/hilt.png" alt="Hilt">
-                    <span>Hilt (+3 speed)</span>
-                </div>
-                <div class="weapon-option" onclick="upgradeWeapon('core')">
-                    <img src="../img/core.png" alt="Core">
-                    <span>Core (+10 durability)</span>
-                </div>
-            </div>
-            <button class="menu-button" onclick="switchScreen('game-screen')">⬅ Back</button>
-        </div>
+        <button id="attack-btn">Attack</button>
+        <button onclick="switchScreen('menu-screen')">Back to Menu</button>
     </div>
 
     <!-- Instructions Screen -->
     <div id="instructions-screen" class="screen">
-        <div class="menu-container">
-            <h1>📜 Instructions</h1>
-            <p>Welcome to InuGladius! Here's how to play:</p>
-            <ul>
-                <li>⚔️ Attack your enemy by pressing the "Attack" button.</li>
-                <li>🏆 Defeat enemies to earn $INU coins and advance levels.</li>
-                <li>⚔️ Upgrade your weapons for stronger attacks!</li>
-            </ul>
-            <button class="menu-button" onclick="switchScreen('menu-screen')">⬅ Back</button>
-        </div>
+        <h2>How to Play</h2>
+        <p>Attack your enemy, earn $INU coins, and upgrade your weapons!</p>
+        <button onclick="switchScreen('menu-screen')">Back to Menu</button>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen">
+        <h2>Settings</h2>
+        <p>Adjust your game preferences here (future feature).</p>
+        <button onclick="switchScreen('menu-screen')">Back to Menu</button>
     </div>
 
     <script src="script.js"></script>
