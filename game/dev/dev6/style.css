@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #2c3e50;
+    color: white;
+    overflow: hidden;
+}
+
+/* Screens */
+.screen {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #2e2e2e, #1c1c1c);
+    animation: fadeIn 0.5s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Menu Buttons */
+.menu-button {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 4px #c87e0f;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.menu-button.small {
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+/* Arena Styling */
+.arena {
+    width: 100%;
+    height: 60%;
+    background: url('img/arena-background.webp') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-top: 4px solid #f39c12;
+}
+
+.gladiator img {
+    width: 100px;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Health Bars */
+.health-bar {
+    width: 150px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.health {
+    height: 100%;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
