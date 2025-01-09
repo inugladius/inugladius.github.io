@@ -9,6 +9,7 @@ let weaponStats = { attack: 10, speed: 5, durability: 10 };
 window.onload = () => {
     loadGame();
     updateStats();
+    switchScreen('menu-screen');
 };
 
 // Save Game Data to Cookies
