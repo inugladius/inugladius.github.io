@@ -1,5 +1,6 @@
 // Game Variables
 let level = 1;
+let live = 3;
 let playerHealth = 100;
 let enemyHealth = 100;
 let coins = 50000;
