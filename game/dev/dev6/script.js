@@ -68,7 +68,7 @@ document.getElementById('attack-btn').addEventListener('click', () => {
             resetGame();
         } else {
             alert(`[-1] You lost 1 life. ${live - 1} lives remaining.`);
-            live = (live-1);
+            live--;
             updateStats();
         }
     }
