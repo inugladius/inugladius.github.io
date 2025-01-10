@@ -24,6 +24,7 @@ function updateStats() {
     document.getElementById('upgrade-coins').innerText = `${coins} $INU`;
     document.getElementById('player-health').style.width = `${playerHealth}%`;
     document.getElementById('enemy-health').style.width = `${enemyHealth}%`;
+    document.getElementById('weaponstatus').innerText = weapon;
 }
 
 // Attack Logic with Visual Effects
