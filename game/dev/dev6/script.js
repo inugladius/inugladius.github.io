@@ -25,9 +25,8 @@ function updateStats() {
     document.getElementById('upgrade-coins').innerText = `${coins} $INU`;
     document.getElementById('player-health').style.width = `${playerHealth}%`;
     document.getElementById('enemy-health').style.width = `${enemyHealth}%`;
-    document.getElementById('weaponstatus').innerText = weapon;
-    document.getElementById('livestatus').innerText = live;
-
+    document.getElementById('weaponstatus').innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
+    document.getElementById('livestatus').innerText = `Lives: ${live}`;
 }
 
 // Attack Logic with Visual Effects
@@ -64,29 +63,25 @@ document.getElementById('attack-btn').addEventListener('click', () => {
         // Save Progress
         saveGame();
     } else {
-       if (live < 1){
-        alert("Game over! Reset to continue.");
-        level = 1;
-        live = 3;
-        playerHealth = 100;
-        enemyHealth = 100;
-        coins = 100;
-        weapon = { blade: 0, hilt: 0, core: 0 };
-       } else {
-        alert("[-1] You lost 1/"+live+" live.");
-        live = live-1;
-       }
-        
+        if (live < 1) {
+            alert("Game over! Reset to continue.");
+            resetGame();
+        } else {
+            alert(`[-1] You lost 1 life. ${live - 1} lives remaining.`);
+            live -= 1;
+            updateStats();
+        }
     }
 });
 
 // Attack Animation Function
 function triggerAttackAnimation(character) {
     const element = document.getElementById(character);
-    element.classList.add('attack-animation');
-    setTimeout(() => element.classList.remove('attack-animation'), 500);
+    if (element) {
+        element.classList.add('attack-animation');
+        setTimeout(() => element.classList.remove('attack-animation'), 500);
+    }
 }
-
 
 // Next Level
 document.getElementById('next-level-btn').addEventListener('click', () => {
@@ -117,11 +112,19 @@ function upgradeWeapon(part) {
 
 // Save and Load Game
 function saveGame() {
+    if (typeof localStorage === 'undefined') {
+        alert("Local storage is not supported or disabled.");
+        return;
+    }
     const gameData = { level, coins, playerHealth, enemyHealth, weapon, live };
     localStorage.setItem('inuGame', JSON.stringify(gameData));
 }
 
 function loadGame() {
+    if (typeof localStorage === 'undefined') {
+        alert("Local storage is not supported or disabled.");
+        return;
+    }
     const savedGame = JSON.parse(localStorage.getItem('inuGame'));
     if (savedGame) {
         level = savedGame.level;
@@ -132,6 +135,18 @@ function loadGame() {
         live = savedGame.live;
     }
     updateStats();
+}
+
+// Reset Game
+function resetGame() {
+    level = 1;
+    live = 3;
+    playerHealth = 100;
+    enemyHealth = 100;
+    coins = 50000;
+    weapon = { blade: 0, hilt: 0, core: 0 };
+    updateStats();
+    saveGame();
 }
 
 // Initialize Game
