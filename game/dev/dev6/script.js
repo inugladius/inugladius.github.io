@@ -26,6 +26,8 @@ function updateStats() {
     document.getElementById('player-health').style.width = `${playerHealth}%`;
     document.getElementById('enemy-health').style.width = `${enemyHealth}%`;
     document.getElementById('weaponstatus').innerText = weapon;
+    document.getElementById('livestatus').innerText = live;
+
 }
 
 // Attack Logic with Visual Effects
@@ -62,7 +64,19 @@ document.getElementById('attack-btn').addEventListener('click', () => {
         // Save Progress
         saveGame();
     } else {
+       if (live < 1){
         alert("Game over! Reset to continue.");
+        level = 1;
+        live = 3;
+        playerHealth = 100;
+        enemyHealth = 100;
+        coins = 100;
+        weapon = { blade: 0, hilt: 0, core: 0 };
+       } else {
+        alert("[-1] You lost 1/"+live+" live.");
+        live = live-1;
+       }
+        
     }
 });
 
@@ -103,7 +117,7 @@ function upgradeWeapon(part) {
 
 // Save and Load Game
 function saveGame() {
-    const gameData = { level, coins, playerHealth, enemyHealth, weapon };
+    const gameData = { level, coins, playerHealth, enemyHealth, weapon, live };
     localStorage.setItem('inuGame', JSON.stringify(gameData));
 }
 
@@ -115,6 +129,7 @@ function loadGame() {
         playerHealth = savedGame.playerHealth;
         enemyHealth = savedGame.enemyHealth;
         weapon = savedGame.weapon;
+        live = savedGame.live;
     }
     updateStats();
 }
