@@ -1,6 +1,6 @@
 // Game Variables
 let level = 1;
-let live = 3;
+let lives = 3;
 let playerHealth = 100;
 let enemyHealth = 100;
 let coins = 50000;
@@ -15,18 +15,31 @@ function startGame() {
 // Screen Switching
 function switchScreen(screenId) {
     document.querySelectorAll('.screen').forEach(screen => screen.classList.remove('active'));
-    document.getElementById(screenId).classList.add('active');
+    const targetScreen = document.getElementById(screenId);
+    if (targetScreen) {
+        targetScreen.classList.add('active');
+    }
 }
 
 // Update Stats
 function updateStats() {
-    document.getElementById('level').innerText = level;
-    document.getElementById('coins').innerText = `${coins} $INU`;
-    document.getElementById('upgrade-coins').innerText = `${coins} $INU`;
-    document.getElementById('player-health').style.width = `${playerHealth}%`;
-    document.getElementById('enemy-health').style.width = `${enemyHealth}%`;
-    document.getElementById('weaponstatus').innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
-    document.getElementById('livestatus').innerText = `Lives: ${live}`;
+    const levelElem = document.getElementById('level');
+    const coinsElem = document.getElementById('coins');
+    const upgradeCoinsElem = document.getElementById('upgrade-coins');
+    const playerHealthElem = document.getElementById('player-health');
+    const enemyHealthElem = document.getElementById('enemy-health');
+    const weaponStatusElem = document.getElementById('weaponstatus');
+    const liveStatusElem = document.getElementById('livestatus');
+
+    if (levelElem) levelElem.innerText = level;
+    if (coinsElem) coinsElem.innerText = `${coins} $INU`;
+    if (upgradeCoinsElem) upgradeCoinsElem.innerText = `${coins} $INU`;
+    if (playerHealthElem) playerHealthElem.style.width = `${playerHealth}%`;
+    if (enemyHealthElem) enemyHealthElem.style.width = `${enemyHealth}%`;
+    if (weaponStatusElem) {
+        weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
+    }
+    if (liveStatusElem) liveStatusElem.innerText = `Lives: ${lives}`;
 }
 
 // Attack Logic with Visual Effects
@@ -63,12 +76,12 @@ document.getElementById('attack-btn').addEventListener('click', () => {
         // Save Progress
         saveGame();
     } else {
-        if (live < 1) {
+        if (lives < 1) {
             alert("Game over! Reset to continue.");
             resetGame();
         } else {
-            alert(`[-1] You lost 1 life. ${live - 1} lives remaining.`);
-            live--;
+            lives--;
+            alert(`[-1] You lost 1 life. ${lives} lives remaining.`);
             updateStats();
         }
     }
@@ -116,7 +129,7 @@ function saveGame() {
         alert("Local storage is not supported or disabled.");
         return;
     }
-    const gameData = { level, coins, playerHealth, enemyHealth, weapon, live };
+    const gameData = { level, coins, playerHealth, enemyHealth, weapon, lives };
     localStorage.setItem('inuGame', JSON.stringify(gameData));
 }
 
@@ -132,7 +145,7 @@ function loadGame() {
         playerHealth = savedGame.playerHealth;
         enemyHealth = savedGame.enemyHealth;
         weapon = savedGame.weapon;
-        live = savedGame.live;
+        lives = savedGame.lives;
     }
     updateStats();
 }
@@ -140,7 +153,7 @@ function loadGame() {
 // Reset Game
 function resetGame() {
     level = 1;
-    live = 3;
+    lives = 3;
     playerHealth = 100;
     enemyHealth = 100;
     coins = 50000;
