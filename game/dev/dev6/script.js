@@ -82,6 +82,7 @@ document.getElementById('attack-btn').addEventListener('click', () => {
         } else {
             lives--;
             alert(`[-1] You lost 1 life. ${lives} lives remaining.`);
+            playerHealth = 100;
             updateStats();
         }
     }
