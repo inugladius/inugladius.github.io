@@ -38,6 +38,7 @@ function updateStats() {
     if (enemyHealthElem) enemyHealthElem.style.width = `${enemyHealth}%`;
     if (weaponStatusElem) {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
+        weaponUpgrade = ((${weapon.blade} * 1) + (${weapon.hilt} * 1)) + ${weapon.core};
     }
     if (liveStatusElem) liveStatusElem.innerText = `Lives: ${lives}`;
 }
@@ -46,7 +47,7 @@ function updateStats() {
 document.getElementById('attack-btn').addEventListener('click', () => {
     if (enemyHealth > 0 && playerHealth > 0) {
         // Calculate Damage
-        const playerDamage = Math.floor(Math.random() * 15) + 5;
+        const playerDamage = Math.floor((Math.random() * 15) + weaponUpgrade) + 5 ;
         const enemyDamage = Math.floor(Math.random() * 10) + 5;
 
         // Apply Damage
