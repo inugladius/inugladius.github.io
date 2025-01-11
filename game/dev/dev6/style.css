@@ -167,3 +167,18 @@ body {
     100% { transform: translateX(0); }
 }
 
+
+ .background-image {
+    background-image: url('img/bg1.jpg'); /* Ersetze dies durch den Pfad zu deinem Bild */
+    background-size: cover; /* Das Bild wird auf die Größe des Containers angepasst */
+    background-attachment: fixed; /* Das Bild bleibt fixiert, wenn gescrollt wird */
+    background-position: center; /* Zentriert das Bild */
+    height: 100%; /* Vollständige Höhe des Sichtfensters */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+
+}
