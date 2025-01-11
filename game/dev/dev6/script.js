@@ -49,7 +49,7 @@ function updateStats() {
 document.getElementById('attack-btn').addEventListener('click', () => {
     if (enemyHealth > 0 && playerHealth > 0) {
         // Calculate Damage
-        const playerDamage = Math.floor((Math.random() * 15) + 55) ;
+        const playerDamage = Math.floor((Math.random() * 15) + 505) ;
         const enemyDamage = Math.floor(Math.random() * 10) + 5;
 
         // Apply Damage
