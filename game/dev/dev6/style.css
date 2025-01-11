@@ -169,7 +169,7 @@ body {
 
 
  .background-image {
-    background-image: url('img/bg1.jpg'); /* Ersetze dies durch den Pfad zu deinem Bild */
+    background-image: url('../img/loader_bg.png'); /* Ersetze dies durch den Pfad zu deinem Bild */
     background-size: cover; /* Das Bild wird auf die Größe des Containers angepasst */
     background-attachment: fixed; /* Das Bild bleibt fixiert, wenn gescrollt wird */
     background-position: center; /* Zentriert das Bild */
