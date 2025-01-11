@@ -39,7 +39,7 @@ function updateStats() {
     if (enemyHealthElem) enemyHealthElem.style.width = `${enemyHealth}%`;
     if (weaponStatusElem) {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
-        weaponUpgrade = (`${weapon.blade}`) + (`${weapon.hilt}`);
+        weaponUpgrade = ((`${weapon.blade}`)*1) + ((`${weapon.hilt}`)*1);
         weaponxStatusElem.innerText = weaponUpgrade;
     }
     if (liveStatusElem) liveStatusElem.innerText = `Lives: ${lives}`;
