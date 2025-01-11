@@ -30,6 +30,7 @@ function updateStats() {
     const enemyHealthElem = document.getElementById('enemy-health');
     const weaponStatusElem = document.getElementById('weaponstatus');
     const liveStatusElem = document.getElementById('livestatus');
+    const weaponxStatusElem = document.getElementById('weaponsession');
 
     if (levelElem) levelElem.innerText = level;
     if (coinsElem) coinsElem.innerText = `${coins} $INU`;
@@ -39,6 +40,7 @@ function updateStats() {
     if (weaponStatusElem) {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
         weaponUpgrade = ((${weapon.blade} * 1) + (${weapon.hilt} * 1)) + ${weapon.core};
+        weaponxStatusElem.innerText = weaponUpgrade;
     }
     if (liveStatusElem) liveStatusElem.innerText = `Lives: ${lives}`;
 }
