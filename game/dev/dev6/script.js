@@ -27,6 +27,7 @@ function updateStats() {
     const coinsElem = document.getElementById('coins');
     const upgradeCoinsElem = document.getElementById('upgrade-coins');
     const playerHealthElem = document.getElementById('player-health');
+    const playerxHealthElem = document.getElementById('playerxhealth');
     const enemyHealthElem = document.getElementById('enemy-health');
     const weaponStatusElem = document.getElementById('weaponstatus');
     const liveStatusElem = document.getElementById('livestatus');
@@ -36,6 +37,7 @@ function updateStats() {
     if (coinsElem) coinsElem.innerText = `${coins} $INU`;
     if (upgradeCoinsElem) upgradeCoinsElem.innerText = `${coins} $INU`;
     if (playerHealthElem) playerHealthElem.style.width = `${playerHealth}%`;
+    if (playerxHealthElem) playerxHealthElem.innerText = `${playerHealth}%`;
     if (enemyHealthElem) enemyHealthElem.style.width = `${enemyHealth}%`;
     if (weaponStatusElem) {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
@@ -49,7 +51,7 @@ function updateStats() {
 document.getElementById('attack-btn').addEventListener('click', () => {
     if (enemyHealth > 0 && playerHealth > 0) {
         // Calculate Damage
-        const playerDamage = Math.floor((Math.random() * 15) + 50) ;
+        const playerDamage = Math.floor(((Math.random() * 15) + 6)+ weaponUpgrade) ;
         const enemyDamage = Math.floor(Math.random() * 10) + 5;
 
         // Apply Damage
