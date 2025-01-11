@@ -13,7 +13,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, #ffcc33, #ff9933); /* Cartoon-Stil */
+      /* background: linear-gradient(to bottom, #ffcc33, #ff9933); /* Cartoon-Stil */
       
       background-image: url('../img/loader_bg.png'); /* Ersetze dies durch den Pfad zu deinem Bild */
       background-size: cover; /* Das Bild wird auf die Größe des Containers angepasst */
