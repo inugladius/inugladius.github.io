@@ -47,6 +47,7 @@ function updateStats() {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
         weaponxStatusElem.innerText = weaponUpgrade;
     }
+    if (liveStatusElem) liveStatusElem.innerText = live;
     
 }
 
