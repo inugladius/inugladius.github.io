@@ -78,6 +78,7 @@ document.getElementById('attack-btn').addEventListener('click', () => {
         if (enemyHealth === 0) {
             coins += 20;
             alert("Enemy defeated! You earned 20 $INU.");
+            levelUp();
         }
         if (playerHealth === 0) {
             alert("You have been defeated! Try again.");
