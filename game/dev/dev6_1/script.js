@@ -49,14 +49,7 @@ function updateStats() {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
         weaponxStatusElem.innerText = weaponUpgrade;
     }
-    if (liveStatusElema) {
-        if (lives == 1) {
-            document.getElementById('iconlive1').style.opacity=`1`;
-            document.getElementById('iconlive2').style.opacity=`0`;
-            document.getElementById('iconlive3').style.opacity=`0`;
-        }
-            
-    }
+    
 }
 
 // Attack Logic with Visual Effects
