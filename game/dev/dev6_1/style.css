@@ -5,6 +5,7 @@ body {
     background: #2c3e50;
     color: white;
     overflow: hidden;
+    max-width:100%;
 }
 
 #loadingScreen {
@@ -229,6 +230,7 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     align-items: center;
+    position:fixed;
 }
 
 .stats-item {
