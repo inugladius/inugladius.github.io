@@ -51,9 +51,9 @@ function updateStats() {
     }
     if (liveStatusElema) {
         if (lives == 1) {
-            document.getElementById('iconlive1').style.opavity=1;
-            document.getElementById('iconlive2').style.opacity=0;
-            document.getElementById('iconlive3').style.opacity=0;
+            document.getElementById('iconlive1').style.opavity=`1`;
+            document.getElementById('iconlive2').style.opacity=`0`;
+            document.getElementById('iconlive3').style.opacity=`0`;
             
     }
 }
