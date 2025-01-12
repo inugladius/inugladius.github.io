@@ -35,7 +35,7 @@ function updateStats() {
     const liveStatusElem = document.getElementById('livestatus');
     const weaponxStatusElem = document.getElementById('weaponsession');
     
-    const liveStatusElema = document.getElementById('livestatus');
+    const liveStatusElema = document.getElementById('livestatux');
 
     const weaponUpgrade = weapon.blade + weapon.hilt; // Fix: Definition von weaponUpgrade
 
