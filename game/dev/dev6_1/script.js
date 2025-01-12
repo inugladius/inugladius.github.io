@@ -152,7 +152,7 @@ function upgradeWeapon(part) {
 
 // Neue Arenen
 function loadArena() {
-    const arenaBackgrounds = ['img/arena1.webp', 'img/arena2.webp', 'img/arena3.webp'];
+    const arenaBackgrounds = ['../img/arena1.webp', '../img/arena2.webp', '../img/arena3.webp'];
     const arena = document.querySelector('.arena');
     const currentArena = level % arenaBackgrounds.length;
     if (arena) arena.style.backgroundImage = `url(${arenaBackgrounds[currentArena]})`;
