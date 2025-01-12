@@ -217,7 +217,6 @@ body {
     padding: 10px 20px;
     background: linear-gradient(to right, #ffcc33, #ff9933);
     color: white;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -251,8 +250,8 @@ body {
 
 /* Icons Styling */
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
 }
 
