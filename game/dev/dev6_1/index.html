@@ -41,10 +41,19 @@
         </div>
     </div>
 
+    <!-- Entwickler Screen -->
+    <div id="dev-screen" class="screen">
+        <div class="menu-container">
+            <h1>⚙️ Entwickler Settings</h1><br>
+            WeaponSession: <span id="weaponsession">n/a</span>
+            <button class="menu-button" onclick="switchScreen('menu-screen')">⬅ Back</button>
+        </div>
+    </div>
+
     <!-- Game Screen -->
     <div id="game-screen" class="screen">
-        <div style="position:fixed;top:0;left:0;width:100px;height:auto;background-color:gradient(0,0,0,.18);">
-            <div id="weaponsession">n/a</div>
+        <div style="position:fixed;top:0;right:8;width:auto;height:auto;background:rgba(0,0,0,.18);">
+            <button id="dev-btn" class="menu-button"  onclick="switchScreen('dev-screen')">⚙️</button>
         </div>
       
         <header class="game-header">
