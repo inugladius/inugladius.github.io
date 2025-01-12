@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InuGladius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Loader -->
+<div id="loadingScreen" class="background-image">
+ <div id="loadingText">Lädt...</div>
+ <div class="progressBar">
+  <div class="progressBarFill" id="progressBarFill"></div>
+ </div>
+<!-- <img id="cartoonCharacter" src="../img/inu_logo.png" alt="Loading Character"> -->
+</div>
 
+<!-- Hauptinhalt -->
+<div id="mainContent" style="display: none;">
+    
+    <!-- Main Menu -->
+    <div id="menu-screen" class="screen active">
+        <div class="menu-container">
+            <h1>🐾 InuGladius</h1>
+            <button class="menu-button" onclick="startGame()">▶ Start Game</button>
+            <button class="menu-button" onclick="switchScreen('character-screen')">⚙ choose Inu</button>
+            <button class="menu-button" onclick="switchScreen('settings-screen')">⚙ Settings</button>
+        </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen">
+        <div class="menu-container">
+            <h1>⚙️ Settings</h1>
+            <label>
+                Sound: 
+                <input type="checkbox" id="sound-toggle" checked>
+            </label>
+            <button class="menu-button" onclick="switchScreen('menu-screen')">⬅ Back</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div style="position:fixed;top:0;left:0;width:100px;height:auto;background-color:gradient(0,0,0,.18);">
+            <div id="weaponsession">n/a</div>
+        </div>
+      
+        <header class="game-header">
+    <div class="stats-bar">
+        <div class="stats-item">
+            <img src="../img/level-icon.png" alt="Level" class="icon">
+            <span>Level: <strong id="level">1</strong></span>
+        </div>
+        <div class="stats-item">
+            <img src="../img/heart-icon.png" alt="Lives" class="icon">
+            <span>Lives: <strong id="livestatus">n/A</strong></span>
+        </div>
+        <div class="stats-item">
+            <img src="../img/coin-icon.png" alt="Coins" class="icon">
+            <span>Coins: <strong id="coins">$INU</strong></span>
+        </div>
+        <div class="stats-item">
+            <img src="../img/sword-icon.png" alt="Weapon" class="icon">
+            <span>Weapon: <strong id="weaponstatus">n/A</strong></span>
+        </div>
+        <div class="stats-item">
+            <img src="../img/health-icon.png" alt="Health" class="icon">
+            <span>Health: <strong id="playerxhealth">n/A</strong></span>
+        </div>
+    </div>
+    <div class="game-controls">
+        <button class="menu-button small" onclick="switchScreen('weapons-screen')">⚔️ Upgrade Weapon</button>
+    </div>
+</header>
+
+        <div class="arena">
+            <div class="gladiator" id="player">
+                <img src="../img/player2.png" alt="Player Gladiator" width="56" height="auto">
+                <div class="health-bar">
+                    <div id="player-health" class="health"></div>
+                </div>
+            </div>
+            <div class="gladiator" id="enemy">
+                <img src="../img/player1.png" alt="Enemy Gladiator">
+                <div class="health-bar">
+                    <div id="enemy-health" class="health" width="56" height="auto"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="attack-btn" class="menu-button">⚔️ Attack</button>
+            <button id="next-level-btn" class="menu-button">🏆 Next Level</button>
+        </div>
+    </div>
+
+    <!-- Weapons Screen -->
+    <div id="weapons-screen" class="screen">
+        <div class="menu-container">
+            <h1>Upgrade Your Weapon</h1>
+            <p>Coins: <span id="upgrade-coins">$INU</span></p>
+            <div class="weapons-upgrade">
+                <div class="weapon-option" onclick="upgradeWeapon('blade')">
+                    <img src="../img/blade.png" alt="Blade" width="22" height="auto">
+                    <span>Blade (+5 attack)</span>
+                </div>
+                <div class="weapon-option" onclick="upgradeWeapon('hilt')">
+                    <img src="../img/hilt.png" alt="Hilt" width="22" height="auto">
+                    <span>Hilt (+3 speed)</span>
+                </div>
+                <div class="weapon-option" onclick="upgradeWeapon('core')">
+                    <img src="../img/core.png" alt="Core" width="22" height="auto">
+                    <span>Core (+10 durability)</span>
+                </div>
+            </div>
+            <button class="menu-button" onclick="switchScreen('game-screen')">⬅ Back</button>
+        </div>
+    </div>
+
+    <!-- Charakterauswahl -->
+<div id="character-screen" class="screen">
+    <h1>Wähle deinen Inu-Gladiator</h1>
+    <div class="character-options">
+        <button class="menu-button" onclick="chooseCharacter(0)">Inu Warrior</button>
+        <button class="menu-button" onclick="chooseCharacter(1)">Inu Berserker</button>
+        <button class="menu-button" onclick="chooseCharacter(2)">Inu Defender</button>
+    </div>
+    <button class="menu-button" onclick="switchScreen('menu-screen')">⬅ Zurück</button>
+</div>
+
+    
+</div>
+    
+    <script src="script.js"></script>
+    <script src="loader.js"></script>
+</body>
+</html>
