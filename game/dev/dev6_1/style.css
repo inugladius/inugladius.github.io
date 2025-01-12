@@ -194,7 +194,7 @@ body {
 #level-up-animation {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     font-size: 3em;
     font-weight: bold;
@@ -204,6 +204,7 @@ body {
     border-radius: 10px;
     text-align: center;
     animation: level-up 2s ease;
+    width:50%;
 }
 
 @keyframes level-up {
