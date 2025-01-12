@@ -56,7 +56,7 @@ document.getElementById('attack-btn').addEventListener('click', () => {
 
     if (enemyHealth > 0 && playerHealth > 0) {
         // Calculate Damage
-        const playerDamage = Math.floor(Math.random() * 15 + 6 + weaponUpgrade);
+        const playerDamage = Math.floor(Math.random() * 12 + 5 + weaponUpgrade);
         const enemyDamage = Math.floor(Math.random() * 10 + 5);
 
         // Apply Damage
