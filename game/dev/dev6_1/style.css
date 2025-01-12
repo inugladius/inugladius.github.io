@@ -215,6 +215,7 @@ body {
 
 /* Game Header Styling */
 .game-header {
+    position:fixed;
     width: 100%;
     padding: 10px 20px;
     background: linear-gradient(to right, #ffcc33, #ff9933);
