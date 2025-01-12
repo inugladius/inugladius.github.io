@@ -194,7 +194,7 @@ body {
 #level-up-animation {
     position: fixed;
     top: 50%;
-    left: 25%;
+    left: 10%;
     transform: translate(-50%, -50%);
     font-size: 3em;
     font-weight: bold;
@@ -204,12 +204,12 @@ body {
     border-radius: 10px;
     text-align: center;
     animation: level-up 2s ease;
-    width:50%;
+    width:80%;
 }
 
 @keyframes level-up {
     0% { opacity: 0; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
+    50% { opacity: 1; transform: scale(1.4); }
     100% { opacity: 0; transform: scale(1); }
 }
 
@@ -227,13 +227,6 @@ body {
 }
 
 /* Stats Bar */
-.stats-bar {
-    font-size: 1.1em;
-    font-weight: bold;
-    align-items: center;
-    position:fixed;top:0;left:0;width:100%;height:auto;background:rgba(0,0,0,.18);
-}
-
 .stats-item {
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
