@@ -3,7 +3,7 @@ let level = 1;
 let lives = 3;
 let playerHealth = 100;
 let enemyHealth = 100;
-let coins = 50000;
+let coins = 100;
 let weapon = { blade: 0, hilt: 0, core: 0 };
 
 // Start Game
@@ -192,7 +192,7 @@ function resetGame() {
     lives = 3;
     playerHealth = 100;
     enemyHealth = 100;
-    coins = 50000;
+    coins = 100;
     weapon = { blade: 0, hilt: 0, core: 0 };
     loadArena(); // Fix: Arena resetten
     updateStats();
