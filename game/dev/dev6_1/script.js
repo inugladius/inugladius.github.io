@@ -34,6 +34,8 @@ function updateStats() {
     const weaponStatusElem = document.getElementById('weaponstatus');
     const liveStatusElem = document.getElementById('livestatus');
     const weaponxStatusElem = document.getElementById('weaponsession');
+    
+    const liveStatusElema = document.getElementById('livestatus');
 
     const weaponUpgrade = weapon.blade + weapon.hilt; // Fix: Definition von weaponUpgrade
 
@@ -47,7 +49,13 @@ function updateStats() {
         weaponStatusElem.innerText = `Blade: ${weapon.blade}, Hilt: ${weapon.hilt}, Core: ${weapon.core}`;
         weaponxStatusElem.innerText = weaponUpgrade;
     }
-    if (liveStatusElem) liveStatusElem.innerText = `Lives: ${lives}`;
+    if (liveStatusElema) {
+        if (lives == 1) {
+            document.getElementById('iconlive1').style.display = `1`;
+            document.getElementById('iconlive2').style.opacity = `0`;
+            document.getElementById('iconlive3').style.display = `0`;
+            
+    }
 }
 
 // Attack Logic with Visual Effects
