@@ -3,7 +3,7 @@ let level = 1;
 let lives = 3;
 let playerHealth = 100;
 let enemyHealth = 100;
-let coins = 100;
+let coins = 0.000000;
 let weapon = { blade: 0, hilt: 0, core: 0 };
 
 // Start Game
@@ -57,7 +57,7 @@ document.getElementById('attack-btn').addEventListener('click', () => {
 
     if (enemyHealth > 0 && playerHealth > 0) {
         // Calculate Damage
-        const playerDamage = Math.floor(Math.random() * 10 + 4 + weaponUpgrade);
+        const playerDamage = Math.floor(Math.random() * 9 + 5 + weaponUpgrade);
         const enemyDamage = Math.floor(Math.random() * 10 + 5);
 
         // Apply Damage
@@ -116,7 +116,7 @@ function levelUp() {
         level++;
         playerHealth = 100 + level * 10;
         enemyHealth = 100 + level * 20;
-        coins += 50; // Bonus für Levelaufstieg
+        coins += 0.05; // Bonus für Levelaufstieg
         triggerLevelUpAnimation();
         loadArena(); // Fix: Nächste Arena laden
         updateStats();
@@ -193,7 +193,7 @@ function resetGame() {
     lives = 3;
     playerHealth = 100;
     enemyHealth = 100;
-    coins = 100;
+    coins = 0.000000;
     weapon = { blade: 0, hilt: 0, core: 0 };
     loadArena(); // Fix: Arena resetten
     updateStats();
