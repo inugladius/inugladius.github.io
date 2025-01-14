@@ -3,7 +3,7 @@ let level = 1;
 let lives = 3;
 let playerHealth = 100;
 let enemyHealth = 100;
-let coins = 0.000000;
+let coins = 0;
 let weapon = { blade: 0, hilt: 0, core: 0 };
 
 // Start Game
@@ -77,8 +77,8 @@ document.getElementById('attack-btn').addEventListener('click', () => {
 
         // Check Game State
         if (enemyHealth === 0) {
-            coins += 20;
-            alert("Enemy defeated! You earned 20 $INU.");
+            coins += 1;
+            alert("Enemy defeated! You earned 1 $INU.");
             levelUp();
         }
         if (playerHealth === 0) {
@@ -116,7 +116,7 @@ function levelUp() {
         level++;
         playerHealth = 100 + level * 10;
         enemyHealth = 100 + level * 20;
-        coins += 0.05; // Bonus für Levelaufstieg
+        coins += 1; // Bonus für Levelaufstieg
         triggerLevelUpAnimation();
         loadArena(); // Fix: Nächste Arena laden
         updateStats();
@@ -140,7 +140,7 @@ function triggerLevelUpAnimation() {
 
 // Weapon Upgrade
 function upgradeWeapon(part) {
-    const cost = 20;
+    const cost = 5;
     if (coins >= cost) {
         coins -= cost;
         weapon[part]++;
